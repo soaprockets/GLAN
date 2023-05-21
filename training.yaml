@@ -1,0 +1,26 @@
+# Training configuration
+GPU: [0]
+
+VERBOSE: False
+
+MODEL:
+  MODE: 'MIT5K_CSRNet' #VELOL:lol-v2
+
+# Optimization arguments.
+OPTIM:
+  BATCH: 6
+  EPOCHS: 100
+  # EPOCH_DECAY: [10]
+  LR_INITIAL: 2e-4 # 5e-5
+  LR_MIN: 1e-6  # 5e-5
+  # BETA1: 0.9
+
+TRAINING:
+  VAL_AFTER_EVERY: 1
+  RESUME: False
+  TRAIN_PS: 256
+  VAL_PS: None
+  TRAIN_DIR: '/data/Data/dataset/MIT5K2/training'       # path to training data
+  VAL_DIR: '/data/Data/dataset/MIT5K2/test'      # path to validation data
+  SAVE_DIR: '/data/Data/checkpoints'           # path to save models and images
+ 
