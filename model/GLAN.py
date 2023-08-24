@@ -5,7 +5,7 @@ import torch.nn.functional as F
 from einops import rearrange
 import numbers
 # from model.layer import TIS
-from model.block import TIS
+from model.block import FAIM
 from visualization import visualize_feature_map
 class SEModule(nn.Module):
     def __init__(self, channels, reduction=16):
@@ -296,12 +296,12 @@ class GLAN(nn.Module):
  
         # refer to fcanet dict([(64,56), (128,28), (256,14) ,(512,7)])   https://github.com/cfzd/FcaNet.git
         # our feature channel is set 64, f_h and f_h is set 56 according to the above dict
-        self.tis1 = TIS(n_feats=64)
-        self.tis2 = TIS(n_feats=64)
-        self.tis3 = TIS(n_feats=64)
-        self.tis4 = TIS(n_feats=64)
-        self.tis5 = TIS(n_feats=64)
-        self.tis6 = TIS(n_feats=64)
+        self.tis1 = FAIM(n_feats=64)
+        self.tis2 = FAIM(n_feats=64)
+        self.tis3 = FAIM(n_feats=64)
+        self.tis4 = FAIM(n_feats=64)
+        self.tis5 = FAIM(n_feats=64)
+        self.tis6 = FAIM(n_feats=64)
 
        
         self.fm_aggre =  nn.Conv2d(in_channels=64,out_channels=64,kernel_size=3,stride=1,padding=1)
