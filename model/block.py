@@ -113,7 +113,7 @@ class MultiSpectralDCTLayer(nn.Module):
         return dct_filter
     
     
-class TIS(torch.nn.Module):
+class FAIM(torch.nn.Module):
     def __init__(self,n_feats) -> None:
         super().__init__()
 
