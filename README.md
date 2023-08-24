@@ -72,7 +72,7 @@ To train the restoration models of low-light enhancement. You should check the f
     VAL_AFTER_EVERY: 1
     RESUME: False
     TRAIN_PS: 256
-    VAL_PS: 256
+    VAL_PS: None
     TRAIN_DIR: './datasets/LOL/train'       # path to training data
     VAL_DIR: './datasets/LOL/test' # path to validation data
     SAVE_DIR: './checkpoints'           # path to save models and images
