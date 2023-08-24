@@ -31,7 +31,7 @@ class Measure():
 
     def ssim(self, imgA, imgB):
         
-        score, diff = ssim(imgA, imgB, full=True, multichannel=True)
+        score, diff = ssim(imgA, imgB, full=True, channel_axis=2)
         return score
 
     def psnr(self, imgA, imgB):
@@ -109,8 +109,8 @@ def measure_dirs(dirA, dirB, use_gpu, verbose=False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('-dirA', default='/data/Data/dataset/LOL-v2/Real_captured/Test/Normal', type=str) #gt
-    parser.add_argument('-dirB', default='/data/Data/KinD/results/LOLdataset-v2', type=str) #lq
+    parser.add_argument('-dirA', default='/root/autodl-tmp/dataset/lol/lol_dataset/Real_world/eval/high', type=str) #gt
+    parser.add_argument('-dirB', default='/root/autodl-tmp/MonoPix/results/MonoPix_LowLight_Default5_without_ISN__exhaustive/LOL', type=str) #lq
     parser.add_argument('-type', default='png')
     parser.add_argument('--use_gpu', action='store_true', default=True)
     args = parser.parse_args()
