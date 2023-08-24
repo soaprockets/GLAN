@@ -45,7 +45,7 @@ To test the pre-trained models of enhancing on your own images, run
 ```
 python demo.py --input_dir images_folder_path --result_dir save_images_here --weights path_to_models
 ```
-**All pre-trained models can be downloaded at [LOL](https://pan.baidu.com/s/1fCzO2GkkDr0dd4WBufX5lg?pwd=vglb), [LOL-v2](链接：https://pan.baidu.com/s/1FMFSYG5YieF6azaTLWSCeg?pwd=092f), [MIT5K](https://pan.baidu.com/s/19zijHQIpGu8LuKVUHOAYOw?pwd=m1nx)**  
+**All pre-trained models can be downloaded at [LOL](https://pan.baidu.com/s/1fCzO2GkkDr0dd4WBufX5lg?pwd=vglb), [LOL-v2](https://pan.baidu.com/s/1FMFSYG5YieF6azaTLWSCeg?pwd=092f), [MIT5K](https://pan.baidu.com/s/19zijHQIpGu8LuKVUHOAYOw?pwd=m1nx)**  
 
 ## Train  
 To train the restoration models of low-light enhancement. You should check the following components are correct:  
